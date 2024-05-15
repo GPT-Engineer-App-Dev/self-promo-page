@@ -28,8 +28,15 @@ const Index = () => {
           </Button>
         </Flex>
       </VStack>
+      <Footer />
     </Container>
   );
 };
+
+const Footer = () => (
+  <Box as="footer" py={4} textAlign="center" width="100%" bg="gray.200" mt={8}>
+    <Text fontSize="sm">© {new Date().getFullYear()} My Personal Website. All rights reserved.</Text>
+  </Box>
+);
 
 export default Index;
