@@ -1,17 +1,32 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, Text, VStack, Heading, Box, Button, Image, Flex } from "@chakra-ui/react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Index = () => {
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+      <VStack spacing={8}>
+        <Box textAlign="center">
+          <Heading as="h1" size="2xl" mb={4}>Welcome to My Personal Website</Heading>
+          <Text fontSize="lg">I'm a passionate web developer creating modern and responsive designs.</Text>
+        </Box>
+        <Image
+          borderRadius="full"
+          boxSize="150px"
+          src="https://via.placeholder.com/150"
+          alt="Profile Image"
+          mb={4}
+        />
+        <Flex justifyContent="center" gap={4}>
+          <Button as="a" href="https://github.com" target="_blank" leftIcon={<FaGithub />} colorScheme="teal" variant="solid">
+            GitHub
+          </Button>
+          <Button as="a" href="https://linkedin.com" target="_blank" leftIcon={<FaLinkedin />} colorScheme="linkedin" variant="solid">
+            LinkedIn
+          </Button>
+          <Button as="a" href="mailto:example@example.com" leftIcon={<FaEnvelope />} colorScheme="red" variant="solid">
+            Email
+          </Button>
+        </Flex>
       </VStack>
     </Container>
   );
