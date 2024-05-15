@@ -5,8 +5,13 @@ const Index = () => {
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
       <VStack spacing={8}>
-        <Box textAlign="center">
+        <Box textAlign="center" bg="gray.100" p={10} borderRadius="md" boxShadow="md" mb={8}>
           <Heading as="h1" size="2xl" mb={4}>Welcome to My Personal Website</Heading>
+          <Text fontSize="lg" mb={6}>I'm a passionate web developer creating modern and responsive designs.</Text>
+          <Button colorScheme="teal" size="lg">Get in Touch</Button>
+        </Box>
+        <Box textAlign="center">
+          <Heading as="h2" size="xl" mb={4}>About Me</Heading>
           <Text fontSize="lg">I'm a passionate web developer creating modern and responsive designs.</Text>
         </Box>
         <Image
